@@ -1,0 +1,7 @@
+require('dotenv').config();
+
+module.exports = {
+    SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID,
+    SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
+    SPOTIFY_ACCESS_TOKEN: 'AQAMptHxfpB8GA3sUryd5DGxQs9GLCgPHF-i1Jzxm23urYXe9quJ-ZEUgdTvG-U_UHj8W5JgOFipUPZcGy87t4ok0ywvcNNXLK8WQxbi0iv49YOK9xqntFlOG2ZHpeGp95vOdQdyT14lSDr2ImIsWww7SxISY0o38YHwovic3hoZzFF160USnlSogB_1tpL03DoO_P2xSUev4Ev9Nb3M-Su_1X22dQ',
+};

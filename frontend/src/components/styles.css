@@ -1,0 +1,173 @@
+/* Styles for the body to create a lighter blue animated background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(45deg, #e0f7ff, #b3e5fc, #81d4fa, #bbdefb); /* Light blue gradient */
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite; /* Smoother and slower animation */
+  }
+  
+  /* Keyframes for background animation */
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Container for the form and song recommendations */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+  }
+  
+  /* Form styles */
+  form {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px 15px;
+    background-color: #256d66; /* Turquoise color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-left: 10px; /* Margin to create space below the select */
+  }
+  
+  button:hover {
+    background-color: #30b5a0; /* Darker turquoise on hover */
+  }
+  
+  /* Grid styles for song cards */
+  .song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px; /* Space between cards */
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* Card styles with darker blue background */
+  .song-card {
+    background: linear-gradient(145deg, #657dcf, #9db3d6); /* Darker blue gradient */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s;
+    overflow: hidden; /* Prevent overflow when scaling */
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    color: white; /* Make text white for contrast */
+  }
+  
+  .song-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #657dcf, #9db3d6); /* Animate to a slightly lighter blue on hover */
+    z-index: 1; /* Ensure the hovered card is above others */
+  }
+  
+  /* Adding scroll effect for song details */
+  .song-card .song-info {
+    max-height: 200px; /* Set a max height for the info section */
+    overflow-y: auto; /* Enable scroll if content exceeds max height */
+    padding: 10px; /* Padding for better spacing */
+  }
+  
+  /* Text styles for song information */
+  .song-info h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .song-info p {
+    margin: 4px 0;
+  }
+  
+  /* Button styles inside song card */
+  .song-info button {
+    background-color: #1db954; /* Spotify green */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .song-info button:hover {
+    background-color: #1aa34a; /* Darker green on hover */
+  }
+  
+  /* Carousel styling */
+  .carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  .song-card {
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+    background-color: #657dcf; /* Slightly transparent darker blue */
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .song-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+  
+  .scroll-btn.left {
+    left: 10px;
+  }
+  
+  .scroll-btn.right {
+    right: 10px;
+  }
+  
